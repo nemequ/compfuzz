@@ -1,0 +1,25 @@
+diff --git a/bzlib.c b/bzlib.c
+--- a/bzlib.c
++++ b/bzlib.c
+@@ -827,8 +827,10 @@
+                VPrintf2 ( " {0x%08x, 0x%08x}", s->storedBlockCRC, 
+                           s->calculatedBlockCRC );
+             if (s->verbosity >= 2) VPrintf0 ( "]" );
++#if 0
+             if (s->calculatedBlockCRC != s->storedBlockCRC)
+                return BZ_DATA_ERROR;
++#endif
+             s->calculatedCombinedCRC 
+                = (s->calculatedCombinedCRC << 1) | 
+                     (s->calculatedCombinedCRC >> 31);
+@@ -844,8 +846,10 @@
+             if (s->verbosity >= 3)
+                VPrintf2 ( "\n    combined CRCs: stored = 0x%08x, computed = 0x%08x", 
+                           s->storedCombinedCRC, s->calculatedCombinedCRC );
++#if 0
+             if (s->calculatedCombinedCRC != s->storedCombinedCRC)
+                return BZ_DATA_ERROR;
++#endif
+             return r;
+          }
+          if (s->state != BZ_X_OUTPUT) return r;

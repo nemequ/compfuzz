@@ -1,0 +1,13 @@
+‰G;;; -*- Mode: Lisp; Syntax: Common-Ôk-*-
+
+(define-language
+  :grammar
+  '(((S $any) -> (S1Ô9)
+    ((S (Compound $s1 $s2)¬úÜs1) (Conjunction)”s2)„Ø1 (Statement $v¦NP $subj) (V¶ $tenseÂŞAcknowledge $aöĞCommand¼VP Self presÈQuestionœAuxÆ) (&	Be€	Be-Arg„ Ğ	æ€(Occurè	(locˆ	loc)â"â (Loc-Adâ2ğ
+¶À/ğ
+ê5VP1ğäD°#Ş*(ü	À2	ÊĞ‚TVP2à (Æ?„GÊ°($rel°&	 ->¦&Verb/in ´ÒPÆX((À	 $obj€0â	trà		ôH’$‚RÖnĞdiğšèp ĞG¬!V€I)NP $nÄƒPronoun $nÚ(îArticle) (NĞ°($x $yæNumber $x) (Èy))ØZPP ($prepÂ²GPâ	prep¶zÜ€H ->ØŸğ€k$v¶#+Allegro (€pĞO @restÖ	PP $Âx’< 	8ê~ğ	Lucidğ#. $ 	6’)
+  :lexiconÂÑ–c »â7eyes true) (no false) (maybe unknown) (huh unparsedºO°	 -> here tb(nearby near)b' left right up downŠB˜W-> a an theÊÆO-> (will future) (did past) (do $finiteš¾n-> (amˆÕ) (areîisŞbeª	–ƒwasø	wereÄ¨€õ	-> and --èˆnc -> gold Wumpus pit breeze stench glitter nothingš–r´€'0 1 2 3 4 5 6 7 8 9˜€q-> in at to´0¦@ˆä?/ou self) (me master) (I¸ğ	À¹âgo movì& (wentÄâ3ö(Ò Ì†9shoot d:€À	-> (âcarryº7Ôd äğ¤àìieÖJögrab Rˆ (ÊbØ (getğ
+ˆo†¦release ˆì
+ à	drop°droppedªà(-at€Zsh¸,-at¨[	kill„/  (killed¬Ğsmell percei@	fee€ltŒ²	ˆXÒ;àï-> (bring dÌ%brought†Ğgeè6o 	Ä))ôø+parameter *sentences*ÔøI ’ôQthe wôwat 4 4¶yes¦	You Â_„-- –go‚ öÄMthe²‚ìÂ‡no–did you¦m²«a˜ˆis´¯òam¢~	 5 3†	a¨Œis in 3 5špit is’byæis ’¸’Y(D†go to 3 8–Yes -- N„— „r¨¸S‚z-- ”	left†	Kill°--ö~up)¸3%un ss (&optional (ª4Ğ5²¾"Run some test š,ò*count how many ‚¹	not ÔÚ."
+  (Â--if-not
+   #'(lambda (¦<I   (format t "~2&>>> ~(~{~a ~}~)~%" ¾write (second (Â s)) :pretty t¢°
