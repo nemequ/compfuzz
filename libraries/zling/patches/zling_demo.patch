@@ -1,0 +1,43 @@
+diff --git a/demo/zling.cpp b/demo/zling.cpp
+index 1bc82ab..c63f79c 100644
+--- a/demo/zling.cpp
++++ b/demo/zling.cpp
+@@ -176,7 +176,7 @@ int main(int argc, char** argv) {
+     if (argc == 4) {
+         if (freopen(argv[3], "wb", stdout) == NULL) {
+             fprintf(stderr, "error: cannot open file '%s' for write.\n", argv[3]);
+-            return -1;
++            return 0;
+         }
+         argc = 3;
+     }
+@@ -185,7 +185,7 @@ int main(int argc, char** argv) {
+     if (argc == 3) {
+         if (freopen(argv[2], "rb", stdin) == NULL) {
+             fprintf(stderr, "error: cannot open file '%s' for read.\n", argv[2]);
+-            return -1;
++            return 0;
+         }
+         argc = 2;
+     }
+@@ -217,11 +217,11 @@ int main(int argc, char** argv) {
+ 
+     } catch (const std::runtime_error& e) {
+         fprintf(stderr, "zling: runtime error: %s\n", e.what());
+-        return -1;
++        return 0;
+ 
+     } catch (const std::bad_alloc& e) {
+         fprintf(stderr, "zling: allocation failed.");
+-        return -1;
++        return 0;
+     }
+ 
+     // help message
+@@ -231,5 +231,5 @@ int main(int argc, char** argv) {
+     fprintf(stderr, "    * source: (default: stdin)\n");
+     fprintf(stderr, "    * target: (default: stdout)\n");
+     fprintf(stderr, "    * N:      (default: 0) compression level, bigger level for better and slower compression.\n");
+-    return -1;
++    return 0;
+ }
