@@ -18,17 +18,8 @@ The primary goals are:
   codecs.
 * Help avoid regressions by providing test cases for issues.
 
-m^2 has written
-[a good guide](https://extrememoderate.wordpress.com/2015/11/16/fuzz-testing-compressors/)
-for how to fuzz compression codecs.  Some additional notes:
-
-* Use a tmpfs directory.  AFL can be rough on hard drives, and given
-  how small test cases are there isn't usually a problem with running
-  out of RAM.
-* On 64-bit Linux systems you'll probably want to use the
-  limit_memory.sh script distributed with AFL (see the
-  notes_for_asan.txt document, also distributed with AFL, for
-  details).
+If you would like to help, the Wiki contains a
+[guide](https://github.com/nemequ/compfuzz/wiki/HowTo).
 
 ## Structure
 
@@ -60,12 +51,11 @@ in Squash.
 
 Each codec directory may contain the following directories:
 
-* crashes — Tests which, at one point, caused the codec in question to
-  crash.
-* outstanding — If a codec hasn't been fixed yet after discovery of a
+* crashes — If a codec hasn't been fixed yet after discovery of a
   crash but the issue has been made public (see the "Disclosure
   Policy" section below), it goes in this directory.  Once the issue
-  is resolved it will be moved to the "crashes" directory.
+  is resolved it will be moved to the "fixed" directory.
+* fixed — Test cases which, at one point, caused the codec to crash.
 * inputs — Test cases which do *not* cause the codec in question to
   crash.  These are typically combined with the general-purpose inputs
   to seed the fuzzer.
